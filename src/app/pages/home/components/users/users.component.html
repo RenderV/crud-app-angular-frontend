@@ -1,8 +1,35 @@
 <div class="container-fluid">
-  <div class="row  align-items-center text-center full-height">
+  <div class="row align-items-center text-center full-height">
     <div class="col">
-      <h1>Welcome to users page</h1>
-      <h2>Here you can start building your amazing angular application</h2>
+      <table class="table table-dark table-hover table-item text-center">
+        <thead>
+          <tr>
+            <th scope="col">Usuário</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Função</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of userList; index as i">
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.role }}</td>
+            <td>
+              <button title="edit user" (click)="redirectToEditUser()" class="btn btn-secondary btn-block btn-sm gradient-custom-4 text-light bi bi-pencil mx-2"></button>
+              <button title="delete user" (click)="deleteUser(i)" class="btn btn-secondary btn-block btn-sm gradient-custom-4 text-light bi bi-x mx-2"></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="d-flex justify-content-center">
+        <button
+          (click)="redirectToAddUser()"
+          class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"
+        >
+          New
+        </button>
+      </div>
     </div>
   </div>
 </div>
