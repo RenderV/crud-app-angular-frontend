@@ -1,2 +1,55 @@
-<app-navbar></app-navbar>
-<router-outlet></router-outlet>
+<div class="container mt-5">
+  <h1 class="text-center">Resumo dos Usuários</h1>
+
+  <div class="row mb-4">
+    <div class="col">
+      <div class="card text-white bg-info">
+        <div class="card-body">
+          <h5 class="card-title">Quantidade de Usuários Cadastrados</h5>
+          <p class="card-text">{{ userCount }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="text-center">Quantidade de Usuários por Função</h2>
+  <table class="table table-striped mt-3">
+    <thead>
+      <tr>
+        <th>Função</th>
+        <th>Quantidade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let role of userCountByRole | keyvalue">
+        <td>{{ role.key }}</td>
+        <td>{{ role.value }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="text-center mt-5">Lista de Usuários</h2>
+  <div class="d-flex justify-content-end mb-3">
+    <button class="btn btn-primary" routerLink="/app/add-user">Adicionar Usuário</button>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Função</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.role }}</td>
+        <td>
+          <button class="btn btn-warning btn-sm" [routerLink]="['/app/edit-user', user.id]">Editar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
