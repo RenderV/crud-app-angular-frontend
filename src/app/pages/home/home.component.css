@@ -1,0 +1,64 @@
+/* Estilos para o componente HomeComponent */
+.container {
+    /* Gradiente roxo */
+    background: linear-gradient(to bottom, #4b0082, #191970);
+    
+    /* Cor do texto */
+    color: #f0f0f0; /* Cor do texto */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+  
+  /* Estilos para o cabeçalho */
+  h1, h2 {
+    /* Cor do texto */
+    color: #f0f0f0; /* Cor do texto */
+    text-align: center; /* Centralizar texto */
+  }
+  
+  /* Estilos para os cartões */
+  .card {
+    margin-bottom: 20px; /* Espaçamento inferior */
+  }
+  
+  /* Estilos para a tabela */
+  .table {
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo da tabela com opacidade */
+    color: #f0f0f0; /* Cor do texto */
+    border-radius: 10px; /* Borda arredondada */
+  }
+  
+  /* Estilos para os botões */
+  .btn-primary {
+    background-color: #483d8b; /* Cor de fundo do botão */
+    color: #f0f0f0; /* Cor do texto */
+  }
+  
+  .btn-warning {
+    background-color: #8b4513; /* Cor de fundo do botão */
+    color: #f0f0f0; /* Cor do texto */
+  }
+  /* Estilos para as cabeçalhos das tabelas */
+thead {
+    background-color: #483d8b; /* Cor de fundo */
+    color: #f0f0f0; /* Cor do texto */
+  }
+  
+  /* Estilos para as células das cabeçalhos das tabelas */
+  th {
+    padding: 10px; /* Espaçamento interno */
+    text-align: center; /* Centralizar texto */
+  }
+  /* Estilos para a div completa */
+.card {
+    background-color: #483d8b; /* Fundo mais escuro */
+    color: #f0f0f0; /* Texto levemente claro */
+    border-radius: 10px; /* Borda arredondada */
+  }
+  
+  /* Estilos para o texto dentro da div */
+  .card-body, .card-text, .card-title {
+    color: inherit; /* Mantém a cor do texto do pai */
+  }
+  
