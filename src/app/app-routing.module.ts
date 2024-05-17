@@ -8,7 +8,7 @@ import { TodoListComponent } from './pages/home/pages/todo-list/todo-list.compon
 import { SignupComponent } from './pages/signup/signup.component';
 import { AddUserComponent } from './pages/home/pages/add-user/add-user.component';
 import { EditUserComponent } from './pages/home/pages/edit-user/edit-user.component';
-import { Component, OnInit } from '@agular/core'
+import { Component, OnInit } from '@angular/core'
 const routes: Routes = [
   {path: "", redirectTo: "/login", pathMatch: 'full'},
   {path: "login", component: LoginComponent},
