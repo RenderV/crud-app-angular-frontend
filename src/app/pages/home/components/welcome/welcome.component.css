@@ -2,3 +2,23 @@
   min-height: 100%;
   height: 80vh;
 }
+.container-fluid {
+  background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+  color: #ffffff;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.card-title {
+  color: #dddddd;
+}
+
+.table-dark {
+  background-color: #343a40;
+}
+
+.table-dark th, .table-dark td {
+  color: #ffffff;
+}

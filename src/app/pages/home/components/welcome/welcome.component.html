@@ -1,8 +1,29 @@
-<div class="container-fluid">
-  <div class="row  align-items-center text-center full-height">
-    <div class="col">
-      <h1>Welcome to your aplication</h1>
-      <h2>You are logged in</h2>
+  <div class="container mt-5">
+    <h1 class="text-center">Resumo dos Usuários</h1>
+
+    <div class="row mb-4">
+      <div class="col">
+        <div class="card text-white bg-dark">
+          <div class="card-body">
+            <h5 class="card-title">Quantidade de Usuários Cadastrados</h5>
+            <p class="card-text">{{ userCount }}</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+
+    <h2 class="text-center">Quantidade de Usuários por Função</h2>
+    <table class="table table-dark table-striped mt-3">
+      <thead>
+        <tr>
+          <th>Função</th>
+          <th>Quantidade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let role of userCountByRole | keyvalue">
+          <td>{{ role.key }}</td>
+          <td>{{ role.value }}</td>
+        </tr>
+      </tbody>
+    </table>
